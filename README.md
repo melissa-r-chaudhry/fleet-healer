@@ -1,5 +1,13 @@
 # fleet-healer
 
+**What it is:** A self-healing multi-host infrastructure monitor.
+**Why it existed:** A real multi-machine self-hosted fleet needed monitoring with no budget for a third-party observability stack, and silent failures weren't acceptable.
+**What I owned:** Full design and build, including three real false-positive/false-negative bugs found and fixed in production.
+**Stack:** Python, Docker, Slack API, cron/launchd.
+**Production status:** This repo is a sanitized reimplementation of a tool that's been running in production for months — the config here is illustrative, the logic and the bugs are real.
+
+---
+
 A self-healing, multi-vantage-point infrastructure monitor for a small
 self-hosted server fleet. Checks containers, public URLs, disk usage, and
 host reachability every 5 minutes; auto-remediates what it safely can;
